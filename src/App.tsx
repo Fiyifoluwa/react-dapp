@@ -4,6 +4,7 @@ import '@fontsource/inter';
 import Layout from './components/Layout';
 import ConnectButton from './components/ConnectButton';
 import AccountModal from './components/AccountModal';
+import Count from './components/Count';
 
 export default function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -13,6 +14,7 @@ export default function App() {
       <Layout>
         <ConnectButton handleOpenModal={onOpen} />
         <AccountModal isOpen={isOpen} onClose={onClose} />
+        <Count />
       </Layout>
     </ChakraProvider>
   );
